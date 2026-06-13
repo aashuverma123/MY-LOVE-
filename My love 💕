@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Mehak 💌</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: white;
+      margin-top: 80px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .yes { background: lightgreen; }
+    .no { background: lightcoral; }
+    .box { display: none; }
+    img {
+      width: 250px;
+      border-radius: 15px;
+      margin: 10px;
+    }
+    video {
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- STEP 1 -->
+<div id="step1">
+  <h2>Hey Mehak 👀</h2>
+  <p>I’ve something ready for you… do you want to open it?</p>
+  <button class="yes" onclick="step2()">Yes</button>
+  <button class="no" onclick="no1()">No</button>
+</div>
+
+<!-- STEP 2 -->
+<div id="step2" class="box">
+  <h2>Do you remember our memories? 💭</h2>
+  <button class="yes" onclick="step3()">Yes</button>
+  <button class="no" onclick="no2()">No</button>
+</div>
+
+<!-- STEP 3 -->
+<div id="step3" class="box">
+  <h2>Do you know when we talked?</h2>
+  <button onclick="step4()">Day 🌤️</button>
+  <button onclick="step4()">Night 🌙</button>
+</div>
+
+<!-- STEP 4 -->
+<div id="step4" class="box">
+  <h2>Was it raining that day?</h2>
+  <button onclick="step5()">Yes 🌧️</button>
+  <button onclick="step5()">No ☀️</button>
+</div>
+
+<!-- STEP 5 -->
+<div id="step5" class="box">
+  <h2>The best moments of my life 💖</h2>
+  <p>Do you want to see it?</p>
+  <button onclick="step6()">Yes</button>
+</div>
+
+<!-- STEP 6 -->
+<div id="step6" class="box">
+  <h2>Our Memories 📸</h2>
+
+  <!-- PHOTOS -->
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+
+  <!-- VIDEOS -->
+  <div>
+    <video controls>
+      <source src="vid1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div>
+    <video controls>
+      <source src="vid2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <h3 style="margin-top:20px;">
+    You are one of the most beautiful part of my life ❤️
+  </h3>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.box, #step1').forEach(e=>e.style.display='none');
+  document.getElementById(id).style.display='block';
+}
+
+function step2(){ show('step2'); }
+function step3(){ show('step3'); }
+function step4(){ show('step4'); }
+function step5(){ show('step5'); }
+function step6(){ show('step6'); }
+
+function no1(){
+  alert("Okay... I’ll wait 🥺");
+}
+function no2(){
+  alert("Think again... memories matter 💭");
+}
+</script>
+
+</body>
+</html>
